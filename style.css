@@ -1,0 +1,136 @@
+/* Add CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: #edfaff;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  width: 20rem;
+  background: #fff;
+  padding: 2rem 2rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 30px rgba(86, 124, 173, 0.2);
+}
+
+.card img {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  border: 5px solid #1d7dee;
+  box-shadow: 0 4px 30px rgba(86, 124, 173, 0.5);
+  margin-bottom: 1rem;
+}
+
+.title_social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.title {
+  color: #292929;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title span {
+  font-size: 14.5px;
+  margin-bottom: 0.5rem;
+}
+
+.card .social {
+  display: flex;
+  align-items: center;
+}
+
+.card .social i {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.card .social i:hover {
+  color: #1d7dee;
+}
+
+.card .social span {
+  margin: 0 0.2rem;
+}
+
+.para {
+  margin-bottom: 1rem;
+  color: #393939;
+}
+
+/* Button */
+button {
+  font-family: inherit;
+  font-size: 20px;
+  background: royalblue;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+button span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+button svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover .svg-wrapper {
+  animation: btn-animation 0.6s ease-in-out infinite alternate;
+}
+
+button:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+button:hover span {
+  transform: translateX(5em);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+@keyframes btn-animation {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
